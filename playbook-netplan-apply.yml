@@ -1,0 +1,10 @@
+---
+- hosts: app
+  tasks:
+    - name: copy file to backup
+      ansible.builtin.shell: |
+        cp /home/adminja/myfile /home/adminja/myfile.bak
+    - name: Copy Configure netplan to destination
+      template:
+        src: files/netplan-test.yml
+        dest: /tmp/netplan-test.yml

@@ -1,0 +1,7 @@
+---
+- hosts: db
+  tasks:
+    - name: shell copy file to backup
+      ansible.builtin.shell: |
+        cp /home/adminja/myfile /home/adminja/myfile.bak
+

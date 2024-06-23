@@ -1,0 +1,18 @@
+---
+- hosts: app
+  tasks:
+    - name: Print message
+      debug:
+        msg: Hello app server
+
+- hosts: db
+  tasks:
+    - name: Print message
+      debug:
+        msg: Hello db server
+
+- hosts: all
+  tasks:
+    - name: Print message
+      debug:
+        msg: Hello all server
